@@ -1,12 +1,9 @@
-% CSCI-UA.0480-001 Assignment 1, starter Matlab code
-% Adapted from A. Efros
-
 % Chris Neale - cin210
 % 
-% (http://graphics.cs.cmu.edu/courses/15-463/2010_fall/hw/proj1/)
+% convert an existing 3-part Prokudin-Gorskii image into a color 
 
-% name of the input file
-imname = 'part1_4.jpg';
+% name of the input file, naively
+imname = 'part1_3.jpg';
 
 % name of the output file is just "post_"+ whatever the file was called
 filename = ['post_' imname];
@@ -38,6 +35,7 @@ R = fullim(height*2+1:height*3,:);
 %   for green: [     |x | ]
 %   for red    [    | x|  ]  
 %   for blue   [  |   x | ]
+
 [sub_G,template_G] = imcrop(G);
 [sub_R,template_R] = imcrop(R); %  sub_G and sub_R should be in the same area
 [sub_B,template_B] = imcrop(B); % should contain  sub_G and sub_R   
