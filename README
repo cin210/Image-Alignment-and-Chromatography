@@ -1,0 +1,9 @@
+A very simple script using MatLab's Computer Vision libraries
+
+Specifically designed to convert an existing 3-part grayscale Prokudin-Gorskii image into a new color image
+
+Divides an input into 3 sections (assumes all three Prokudin-Gorskii slates are in one vertical column in the first image)
+Requires manual input by the user to first select 2 small features in the red and green spectrum sections of the input
+A final prompt is made to select a subset in the image containing the features previous selected
+
+Automatically aligns images based on the Normalized Cross Correlation between each small feature and the subset, then concatenates the bytes of each pixel to form a solid, color image
